@@ -1,3 +1,14 @@
+import torch
+from torch import nn
+from torch.nn import functional as F
+import numpy as np
+import matplotlib.pyplot as plt
+from tqdm.notebook import tqdm
+from torchvision.datasets import MNIST
+from torchvision import transforms
+from torch.utils.data import DataLoader
+
+
 class Block(nn.Module):
     def __init__(self, in_features, out_features, kernel, stride=1, bias=False, upsample=False):
         super().__init__()
